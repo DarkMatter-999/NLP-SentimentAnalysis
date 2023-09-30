@@ -15,6 +15,11 @@ def home():
 def sentiment():
     return render_template("sentimentpage.html")
 
+# Add a new route for the login page
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
 @app.route("/find_sentiment", methods=["POST"])
 def find_sentiment():
     if 'text' in request.get_json():
